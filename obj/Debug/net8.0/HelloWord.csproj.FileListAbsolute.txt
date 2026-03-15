@@ -12,3 +12,4 @@
 /home/fetrarjr/cSharp_bootcamp/helloWorld/obj/Debug/net8.0/HelloWord.pdb
 /home/fetrarjr/cSharp_bootcamp/helloWorld/obj/Debug/net8.0/HelloWord.genruntimeconfig.cache
 /home/fetrarjr/cSharp_bootcamp/helloWorld/obj/Debug/net8.0/ref/HelloWord.dll
+/home/fetrarjr/cSharp_bootcamp/helloWorld/obj/Debug/net8.0/HelloWord.sourcelink.json
