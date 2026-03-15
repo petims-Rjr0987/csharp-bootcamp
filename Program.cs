@@ -3,6 +3,7 @@ var age = 20;
 var pays = "Madagascar";
 var objectif1 = "Backend Developer";
 var objectif2 = "Game Developer";
+int? ageInput;
 
 Console.WriteLine("======================================================");
 Console.WriteLine("C# Bootcamp\n");
@@ -21,9 +22,16 @@ Console.WriteLine("=======================================================");
 Console.Write("Entrer votre nom : ");
 string name = Console.ReadLine();
 
-Console.Write("Votre age? : ");
-string ageInput = Console.ReadLine();
 
+Console.Write("Votre age? : ");
+string ageText =Console.ReadLine();
+if(int.TryParse(ageText, out int ageValue)){
+    ageInput = ageValue;
+}
+else
+{
+    ageInput =90;
+}
 Console.Write("Votre pays : ");
 string Origin = Console.ReadLine();
 
