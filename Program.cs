@@ -3,55 +3,68 @@ var age = 20;
 var pays = "Madagascar";
 var objectif1 = "Backend Developer";
 var objectif2 = "Game Developer";
-int? ageInput;
 
 Console.WriteLine("======================================================");
 Console.WriteLine("C# Bootcamp\n");
 
 Console.WriteLine($"Nom : {nom}");
-Console.WriteLine($"Age : {age}ans");
+Console.WriteLine($"Age : {age} ans");
 Console.WriteLine($"Pays : {pays}");
 Console.WriteLine($"Objectif 1 : {objectif1}");
 Console.WriteLine($"Objectif 2 : {objectif2}");
 
 Console.WriteLine("======================================================");
-Console.WriteLine("=======================================================");
-Console.WriteLine(" Mon personelle profil");
-Console.WriteLine("=======================================================");
+Console.WriteLine("Mon profil personnel");
+Console.WriteLine("======================================================");
 
 Console.Write("Entrer votre nom : ");
-string name = Console.ReadLine();
+string? name = Console.ReadLine();
 
+Console.Write("Votre age ? : ");
+string? ageText = Console.ReadLine();
 
-Console.Write("Votre age? : ");
-string ageText =Console.ReadLine();
-if(int.TryParse(ageText, out int ageValue)){
+int ageInput;
+
+if (int.TryParse(ageText, out int ageValue))
+{
     ageInput = ageValue;
 }
 else
 {
-    ageInput =90;
+    ageInput = 0;
 }
+
 Console.Write("Votre pays : ");
-string Origin = Console.ReadLine();
+string? origin = Console.ReadLine();
 
 Console.Write("Votre objectif 1 : ");
-string objectif11 = Console.ReadLine();
+string? objectifUser1 = Console.ReadLine();
 
-Console.Write("votre Objectif 2 : ");
-string objectif21 = Console.ReadLine();
-Console.WriteLine("\n==================================================");
-Console.WriteLine("\n RÉSUMÉ DU VOTRE PROFIL :");
-Console.WriteLine("\n==================================================");
-Console.WriteLine($"nom : {name}");
-Console.WriteLine($"age : {ageInput}");
-Console.WriteLine($"pays : {Origin}");
-Console.WriteLine($"objectif 1 : {objectif11}");
-Console.WriteLine($"objectif 1 : {objectif21}");
-Console.WriteLine("\n==================================================");
-Console.WriteLine("\nAppyer etré pour quiter");
-/*Console.ReadLine();
-        git add .
-git commit -m "description"
-git push
-*/
+Console.Write("Votre objectif 2 : ");
+string? objectifUser2 = Console.ReadLine();
+
+Console.WriteLine("\n==============================");
+Console.WriteLine("RÉSUMÉ DE VOTRE PROFIL");
+Console.WriteLine("==============================");
+
+Console.WriteLine($"Nom : {name}");
+string status;
+if(ageInput <16){
+    status ="you need to study more";
+}
+else if(ageInput < 18){
+   status ="you are a teenager";
+}
+else
+{
+    status ="you are an adult";
+}
+Console.WriteLine($"{ageInput} ans {status}");
+//Console.WriteLine($"Age : {ageInput} ans");
+
+Console.WriteLine($"Pays : {origin}");
+Console.WriteLine($"Objectif 1 : {objectifUser1}");
+Console.WriteLine($"Objectif 2 : {objectifUser2}");
+
+Console.WriteLine("\nAppuyer sur Entrée pour quitter");
+Console.ReadLine();
